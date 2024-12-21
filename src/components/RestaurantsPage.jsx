@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { StarIcon, MapPinIcon } from "lucide-react";
 
 const RestaurantsPage = () => {
-  const restaurants = [
+  const [restaurants] = useState([
     {
       name: "Faggio",
-      description: "Une excellente pizzeria italienne située dans le mythique passage des Panoramas. Le four au bois de hêtre donne une saveur unique aux pizzas napolitaines authentiques.",
+      description: "Une excellente pizzeria italienne située dans le mythique passage des Panoramas. Le chef propose une carte fusion entre traditions françaises et influences modernes.",
       rating: 4.7,
       address: "Passage des Panoramas",
       cuisine: "Italien",
-      notes: "Spécialité : Pizza napolitaine au four à bois"
+      notes: "Cadre élégant, bar à cocktails Le Shell"
     },
     {
       name: "Restaurant des Grands Boulevards",
@@ -20,13 +20,13 @@ const RestaurantsPage = () => {
       cuisine: "Française contemporaine",
       notes: "Cadre élégant, bar à cocktails Le Shell"
     }
-  ];
+  ]);
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
-          Top 10 Restaurants du 2ème arrondissement
+          Restaurants du 2ème arrondissement
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {restaurants.map((restaurant, index) => (
