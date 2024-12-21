@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { StarIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { StarIcon, MapPinIcon } from "lucide-react";
 
 const RestaurantsPage = () => {
   const restaurants = [
@@ -12,7 +12,14 @@ const RestaurantsPage = () => {
       cuisine: "Italien",
       notes: "Spécialité : Pizza napolitaine au four à bois"
     },
-    // ... autres restaurants
+    {
+      name: "Restaurant des Grands Boulevards",
+      description: "Une cuisine raffinée dans un cadre somptueux au sein de l'hôtel des Grands Boulevards. Le chef propose une carte fusion entre traditions françaises et influences modernes.",
+      rating: 4.6,
+      address: "17 Boulevard Poissonnière",
+      cuisine: "Française contemporaine",
+      notes: "Cadre élégant, bar à cocktails Le Shell"
+    }
   ];
 
   return (
